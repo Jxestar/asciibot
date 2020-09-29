@@ -1,0 +1,15 @@
+{
+  "name": "asciibot",
+  "version": "6.9",
+  "description": "Ascii bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jxestar",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "figlet": "^1.4.0",
+    "fs": "0.0.1-security"
+  }
+}
