@@ -1,0 +1,25 @@
+
+//only use this if you have a command handler
+
+const figlet = require('figlet');
+
+//command start here :)
+
+module.exports = {
+    name: "ascii",
+
+    async run (client, message, args){
+        if(!args[0]) return message.channel.send('**Usage**: !ascii (some text)');
+
+        msg = args.join(" ");
+
+        figlet.text(msg, function (err, data){
+            if(err){
+                console.log('**Unable** to create ascii texts!');
+                console.dir(err);
+            }
+
+            message.channel.send('```' + data + '```')
+        })
+    }
+}

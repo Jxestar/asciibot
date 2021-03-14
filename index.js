@@ -1,46 +1,68 @@
+
+//the packages needed for the ascii command
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { readdirSync } = require('fs');
-const { join } = require('path');
-client.commands= new Discord.Collection();
+const figlet = require('figlet');
 
-const prefix = '!';
-
-const commandFiles = readdirSync(join(__dirname, "commands")).filter(file => file.endsWith(".js"));
-
-for (const file of commandFiles) {
-    const command = require(join(__dirname, "commands", `${file}`));
-    client.commands.set(command.name, command);
-}
-
-
-client.on("error", console.error);
+//bot status and logs
 
 client.on('ready', () => {
-    console.log('sup kidz im online rn lol.');
-    client.user.setStatus(`online`)
+  console.log(`${client.user.tag} is now online!`);
+  console.log(`=====================================================`);
+  console.log(`Loaded ascii command! Took 0ms!`);
+  console.log(`=====================================================`);
+  console.log(`This is a Discord bot that generate ascii texts.`)
+  console.log(`Made with discord.js, figlet packages and with loves!`)
+  console.log(`=====================================================`);
+  console.log(`© Jxestar#3751`);
+      client.user.setPresence({
+        status: "dnd",
+        game: {
+            name: "!ascii",  
+            type: "WATCHING"
+        }
+    });
 });
 
-client.on("message", async message => {
+//ascii command here
 
-    if(message.author.bot) return;
-    if(message.channel.type === 'dm') return;
+client.on('message', message => {
 
-    if(message.content.startsWith(prefix)) {
-        const args = message.content.slice(prefix.length).trim().split(/ +/);
+//prefix
 
-        const command = args.shift().toLowerCase();
+	if (!message.content.startsWith('!') || message.author.bot) return; 
 
-        if(!client.commands.has(command)) return;
+	const args = message.content.slice('!'.length).trim().split(/ +/);
 
+	const command = args.shift().toLowerCase();
 
-        try {
-            client.commands.get(command).run(client, message, args);
+//ascii command name
 
-        } catch (error){
-            console.error(error);
-        }
-    }
-})
+  if (command === 'ascii') {
 
-client.login(token);
+//error + data part
+
+        if(!args[0]) return message.channel.send('**Usage**: !ascii (some text)');
+
+        msg = args.join(" ");
+
+        figlet.text(msg, function (err, data){
+            if(err){
+                console.log('**Unable** to create ascii texts!');
+                console.dir(err);
+            }
+
+//the bot send generated ascii texts, you can use message.reply
+
+          message.channel.send('```' + data + '```')
+        });
+       };
+     });
+
+//put your bot token here
+
+client.login('token');
+
+// © Jxestar#3751
+
