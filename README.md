@@ -15,8 +15,7 @@ Made by Jxestar#3751
 
 2 | Install packages with `npm i`
 
-3 | Fill the ```javascript 
-client.login('token')```
+3 | Fill the ```client.login('token')```
 with your own token
 
 4 | Start the bot with `node .`
