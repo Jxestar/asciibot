@@ -1,10 +1,4 @@
 {
-  "name": "Ascii bot Discord",
-  "description": "A discord bot that convert texts to ascii",
-  "repository": "https://github.com/Jxestar/asciibot",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
-}
-{
   "name": "Ascii Discord Bot",
   "description": "A discord bot that convert texts to ascii texts",
   "keywords": [
