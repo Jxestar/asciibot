@@ -2,7 +2,7 @@
 A discord bot that generate texts to ascii texts
 
 ### Heroku 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/Jxestar/asciibot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/Jxestar/asciibot/tree/master)
 
 ---
 ### Credits
