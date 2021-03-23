@@ -19,7 +19,7 @@ client.on('ready', () => {
       client.user.setPresence({
         status: "dnd",
         game: {
-            name: "!ascii",  
+            name: "!help",  
             type: "WATCHING"
         }
     });
@@ -36,6 +36,20 @@ client.on('message', message => {
 	const args = message.content.slice('!'.length).trim().split(/ +/);
 
 	const command = args.shift().toLowerCase();
+
+//help command
+  if (command === 'help') {
+  const help = new Discord.MessageEmbed()
+	.setTitle('Ascii Bot Help Panel')
+	.addFields(
+	{ name: 'Ascii', value: '!ascii', inline: true },
+	{ name: 'Ping', value: '!ping', inline: true },
+        { name: 'Help', value: '!help', inline: true },
+	)
+	.setTimestamp()
+	.setFooter('© Jxestar | Ascii Discord Bot');
+   message.channel.send(help);
+  }
 
 //ping command
   if (command === 'ping') {
