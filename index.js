@@ -25,7 +25,7 @@ client.on('ready', () => {
     });
 });
 
-//ascii command here
+//commands here
 
 client.on('message', message => {
 
@@ -37,7 +37,12 @@ client.on('message', message => {
 
 	const command = args.shift().toLowerCase();
 
-//ascii command name
+//ping command
+  if (command === 'ping') {
+    message.channel.send(`🏓 Pong! Latency is **${Date.now() - message.createdTimestamp}** ms!`)
+  }
+	
+//ascii command
 
   if (command === 'ascii') {
 
