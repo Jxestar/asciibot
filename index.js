@@ -53,7 +53,7 @@ client.on('message', message => {
 
 //ping command
   if (command === 'ping') {
-    const ping = message.createdTimestamp;
+    const ping = Date.now() - message.createdTimestamp
     message.channel.send(`🏓 Pong! Latency is **" + ping + "** ms!`)
   }
 	
