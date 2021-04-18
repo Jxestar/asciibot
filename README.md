@@ -1,3 +1,5 @@
+[![discord-welcome-bot](https://github-readme-stats.vercel.app/api/pin/?username=jxestar&repo=asciibot&theme=dark)](https://github.com/Jxestar/asciibot)<br/>
+
 # Ascii Discord Bot
 A discord bot that generate texts to ascii texts
 
