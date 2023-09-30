@@ -1,7 +1,7 @@
 [![discord-welcome-bot](https://github-readme-stats.vercel.app/api/pin/?username=jxestar&repo=asciibot&theme=dark)](https://github.com/Jxestar/asciibot)<br/>
 
 # Ascii Discord Bot
-A discord bot that generate texts to ascii texts
+A discord bot which ascii texts
 
 ### Heroku 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jxestar/asciibot/tree/master)
