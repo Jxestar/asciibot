@@ -8,9 +8,8 @@ A discord bot that generate texts to ascii texts
 
 ---
 ### Credits
-The bot is free to use, add some credit if you want to support me!
-Made by Jxestar#3751
-
+The bot is free to use, nobody want to use it anyways
+The bot use old version of Discord.js so it is really outdated
 ---
 ### Setup
 1 | Clone or download this project
@@ -23,5 +22,5 @@ with your own token
 4 | Start the bot with `node .`
 
 ---
-### © Jxestar#3751
+### © Jxestar
  
